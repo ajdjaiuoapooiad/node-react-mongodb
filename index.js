@@ -14,18 +14,25 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User',userSchema);
 
-    async function storeInfomation(){
-        const user = new User({
-            name: "yukito",
-            age: 23,
-            isMarried: false,
-            salary: 300,
-            gender: "Male",
-        });
-        await user.save();
+    async function fetchInformation() {
+        const user = await User.find({age: 23});
         console.log(user);
         
     }
-    storeInfomation();
+    fetchInformation();
+
+    // async function storeInfomation(){
+    //     const user = new User({
+    //         name: "yukito",
+    //         age: 23,
+    //         isMarried: false,
+    //         salary: 300,
+    //         gender: "Male",
+    //     });
+    //     await user.save();
+    //     console.log(user);
+        
+    // }
+    // storeInfomation();
 
 
