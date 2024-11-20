@@ -26,5 +26,6 @@ const User = mongoose.model('User',userSchema);
         console.log(user);
         
     }
+    storeInfomation();
 
 
