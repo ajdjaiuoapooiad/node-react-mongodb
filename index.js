@@ -21,6 +21,10 @@ const User = mongoose.model('User',userSchema);
     }
     fetchInformation();
 
+
+
+    
+
     // async function storeInfomation(){
     //     const user = new User({
     //         name: "yukito",
